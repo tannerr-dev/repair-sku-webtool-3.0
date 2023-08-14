@@ -1,0 +1,118 @@
+body{
+   background-color:#343A40;
+
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+main{
+	display: flex;
+	flex-direction: column;
+}
+.box{
+   min-width: 480px;
+   max-width: 500px;
+}
+
+.bluebox{
+   color:blanchedalmond;
+   text-align: center;
+
+   font-family:sans-serif;
+	border: 4px solid ;
+	border-color: #4285F4;
+   border-radius: 20px;
+
+   width: 480px ;
+	/* border-color: #0F9D58; */
+
+   background-color: #233b5e;
+
+}
+
+.rmc{
+   margin-top:30px;
+   font-size: 50px;
+
+}
+.rmc2{
+   font-size: 40px;
+}
+.rmBtn {
+   height: 50px;
+   width: 70px;
+   font-size: 24px;
+   margin: 15px;
+   color: rgb(243, 220, 191);
+   background-color: #4285F4;
+   border-radius: 15px;
+   border: 2px solid rgb(187, 206, 247);
+   display: inline;
+   transition: all 0.2s ease-out;
+}
+.rmhr{
+   border-color:#4285F4;
+   margin: 0px;
+}
+#percent{
+   margin: 0px;
+   font-size: 50px;
+}
+h2{
+   display: inline;
+}
+
+
+button:hover{
+   transform: translateY(-.2em);
+   border: 2px solid rgb(255, 255, 255);
+}
+button:active{
+   transform: translateY(-.6em);
+}
+
+
+#statusBar{
+   background-color: #e67777;
+
+   height:30px;
+   margin: 0;
+   display: flex;
+
+}
+#statusBar div{
+   flex-grow: 1;
+}
+#boss{
+   width: 80%;
+}
+#explosion{
+   position:relative;
+   display: none;
+}
+
+#superGreen{
+   background-color: rgb(255, 234, 0);
+   transition: all .5s;
+}
+#green{
+   background-color: rgb(98, 223, 150);
+   transition: all .5s;
+}
+#red{
+   background-color: rgb(47, 59, 85);
+   transition: all .5s;
+}
+#modules{
+	color: rgb(212, 204, 193);
+	font-size:1.5rem;
+	text-decoration: none;
+	border: 2px solid ;
+	border-color: #ADB5BD;	
+	border-radius: 10px;
+   font-family:sans-serif;
+	margin: 1px;
+	padding:7px;
+	width: min-content;
+}

@@ -1,0 +1,145 @@
+body{
+	background-color:#343A40;
+	color:#F4B400;
+	font-size:20px;
+	margin:1px;
+
+	font-family:sans-serif;
+	
+	display:flex;
+	justify-content: center;
+}
+.top{
+	color:#ADB5BD;
+}
+
+h1, h2, h3{
+	margin:15px;
+	/*font-size:3rem;*/
+}
+p{
+	margin:15px;
+}
+
+.card{
+	border: 4px solid ;
+	border-color: #191d1f;
+	background-color: #2c3135;
+    border-radius: 20px;
+	
+	width: 460px;
+	margin-top: 7px;
+
+}
+input{
+	background-color:#495057;
+	width:180px;
+	margin:0px;
+	color:#CAD2C5;
+	pointer-events: none;
+	font-family:inherit;
+	font-size:1.2rem;
+	border-radius:6px;
+}
+
+button{
+	/* background-color:#ADB5BD; */
+	background: linear-gradient(rgb(212, 212, 212) 45%, rgb(167, 167, 167) 55%);
+	font-size:1.2rem;
+	color:black;
+	border: 1px solid #F4B400;
+	border-radius: 4px;
+	transition: all 0.2s ease-out;
+}
+button:active{
+	background-color:#DEE2E6;
+	transform: translateY(.5em);
+}
+button:hover{
+
+	transform: translateX(.2em);
+}
+a{
+	color: #ADB5BD;
+	font-size:1.5rem;
+	text-decoration: none;
+	border: 2px solid ;
+	border-color: #ADB5BD;	
+	border-radius: 10px;
+	font-family:inherit;
+	margin: 1px;
+	padding:7px;
+}
+.yellow{
+	border: 2px solid ;
+	border-color: #F4B400;
+}
+
+.red{
+	border: 2px solid ;
+	border-color: #DB4437;
+}
+
+.green{
+	border: 2px solid ;
+	border-color: #0F9D58;
+}
+.blue{
+	border: 2px solid ;
+	border-color: #4285F4;
+	/* border-color: #0F9D58; */
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0px;
+ }
+a:hover{
+	color:#CAD2C5;
+	border-color:#CAD2C5;
+}
+li{
+	transition: all 0.5s ease-out;
+	color:#ADB5BD;
+}
+.devices{
+	margin:25px;
+	color:#6C757D;
+
+}
+.devices:hover{
+	transform: translateX(.5em);
+}
+
+.space{
+	height:200px;
+}
+
+::placeholder{
+	color:#ADB5BD;
+}
+input[type="checkbox"]{
+		pointer-events: auto;
+		margin-left:0px;
+		padding: 0px;
+		width:20px;
+		height:20px;
+		font-size: 50px;
+		margin-bottom:20px;
+		margin-right:5px;
+}
+input[type="reset"]{
+		pointer-events: auto;
+		margin: 20px;
+}
+form{
+	margin-left:0px;
+	font-size: 18px;
+}
+.qc{
+	color: #0F9D58;
+}
+.qc-list{
+	color:#ADB5BD;
+	font-size:20px;
+}

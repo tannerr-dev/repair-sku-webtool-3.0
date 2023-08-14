@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Part SKU Webtool</title>
+	<link rel="icon" type="image/x-icon" href="cbp-logo.png">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.20.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+	<script type="module" src="index.js"></script>
+
+	<link href="style-index-v6.css" rel="stylesheet">
+  </head>
+  <body>
+	<main>
+	<a id="modules" href="modules.html">Modules</a>
+	<div class="home">
+		<h1 class="top">Part SKU Tool</h1>
+		<input id="searchbar" onkeyup="search_devices()" type="text" name="search" placeholder="Search devices..">
+		<ul id="list">
+			<!-- <li class="devices"><a class="purple" href="https://forms.gle/Hxw1RMCE4rLabaUt8" target="_blank">Netsuite Idea Form</a></li>
+
+			<li class="devices"><a class="blue" href="dashboard/dash.html" target="_blank">Dashboard w/ Notepad</a></li>
+			<li class="devices"><a class="blue" href="dashboard2/dash2.html" target="_blank">Dashboard w/ Notes Generator</a></li>
+
+			<li class="devices"><a class="yellow" href="completed-notes-generator/index.html"target="_blank">Completed Notes Generator</a></li>
+			
+			<li class="devices"><a class="blue" href="repair-metric-calc/calc.html" target="_blank">Metric Calculator</a></li>
+			<li class="devices"><a class="green" href="qcChecklist/QC-checklist.html" target="_blank">QC / Diagnosis Checklist</a></li>
+			 -->
+			<li class="devices"><a class="blue" href="parts/other.html">Other SKUs</a></li>
+
+
+<!-- BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK BREAK  -->
+			<li class="devices"><a class="yellow" href="parts/acer-r721t.html">Acer R721t</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/dell-3100.html">Dell 3100</a></li>
+			<li class="devices"><a class="yellow" href="parts/dell-3100-touch.html">Dell 3100 Touch</a></li>
+			<li class="devices"><a class="yellow" href="parts/dell-3100-2in1.html">Dell 3100 2 in 1</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/hp-11-x360-g3-ee.html">HP 11 x360 G3 EE</a></li>
+			<li class="devices"><a class="yellow" href="parts/hp-11-x360-g4-ee.html">HP 11 x360 G4 EE</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/hp-11a-g6-ee-amd.html">HP 11A G6 EE AMD</a></li>	
+			<li class="devices"><a class="yellow" href="parts/hp-11-g6-ee-intel.html">HP 11 G6 EE Intel</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/hp-11a-g8-ee-amd.html">HP 11A G8 EE AMD</a></li>
+			<li class="devices"><a class="yellow" href="parts/hp-11-g8-ee-intel.html">HP 11 G8 EE Intel</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/hp-14-g5-amd.html">HP 14 G5 AMD</a></li>	
+			<li class="devices"><a class="yellow" href="parts/hp-14-g5-intel.html">HP 14 G5 Intel</a></li>
+
+			<li class="devices"><a class="yellow" href="parts/lenovo-100e-gen2-amd.html">Lenovo 100e Gen 2 AMD</a></li>
+			<li class="devices"><a class="yellow" href="parts/lenovo-100e-gen2-intel.html">Lenovo 100e Gen 2 Intel</a></li>
+			<li class="devices"><a class="yellow" href="parts/lenovo-100e-gen2-mtk.html">Lenovo 100e Gen 2 MTK</a></li>
+
+			
+
+
+
+			<li class="devices"><a class="red" href="parts/acer-c933t.html">Acer C933T</a></li>	
+			<li class="devices"><a class="red" href="parts/acer-r752t.html">Acer R752T</a></li>	
+			<li class="devices"><a class="red" href="parts/acer-r752tn.html">Acer R752TN</a></li>	
+			<li class="devices"><a class="red" href="parts/acer-r753t-c59j.html">Acer R753T-C59J</a></li>
+			
+			<li class="devices"><a class="red" href="parts/asus-c204e.html">ASUS C204E</a></li>
+
+			<li class="devices"><a class="red" href="parts/hp-11-x360-g1-ee.html">HP 11 x360 G1 EE</a></li>
+
+			<li class="devices"><a class="red" href="parts/hp-11-v-series.html">HP 11 V-Series</a></li>
+			<li class="devices"><a class="red" href="parts/hp-11-g5.html">HP 11 G5</a></li>	
+
+			<li class="devices"><a class="red" href="parts/hp-11-g9-ee-intel.html">HP 11 G9 EE Intel</a></li>
+			<li class="devices"><a class="red" href="parts/hp-11-g9-ee-intel-touch.html">HP 11 G9 EE Intel Touch</a></li>
+			<li class="devices"><a class="red" href="parts/hp-11-g9-ee-mtk.html">HP 11 G9 EE MTK</a></li>
+			<li class="devices"><a class="red" href="parts/hp-11-g9-ee-mtk-touch.html">HP 11 G9 EE MTK Touch</a></li>
+
+			<li class="devices"><a class="red" href="parts/hp-14-g6.html">HP 14 G6</a></li>
+			<li class="devices"><a class="red" href="parts/hp-14-g6-touch.html">HP 14 G6 Touch</a></li>
+			<li class="devices"><a class="red" href="parts/hp-14-g7.html">HP 14 G7</a></li>
+
+			<li class="devices"><a class="red" href="parts/lenovo-100e.html">Lenovo 100e</a></li>
+			<li class="devices"><a class="red" href="parts/lenovo-300e.html">Lenovo 300e</a></li>
+
+			<li class="devices"><a class="red" href="parts/lenovo-300e-gen2-mtk.html">Lenovo 300e Gen2 MTK</a></li>
+			<li class="devices"><a class="red" href="parts/lenovo-300e-gen2-amd.html">Lenovo 300e Gen2 AMD</a></li>
+			<li class="devices"><a class="red" href="parts/lenovo-300e-gen2-intel.html">Lenovo 300e Gen2 Intel</a></li>
+
+			<li class="devices"><a class="red" href="parts/lenovo-300e-gen3-amd.html">Lenovo 300e Gen 3 AMD</a></li>
+			<li class="devices"><a class="red" href="parts/lenovo-500e-gen2.html">Lenovo 500e Gen 2 (81MC)</a></li>
+
+			<li class="devices"><a class="red" href="parts/samsung-11-xe310xba.html">Samsung 11 XE310XBA</a></li>
+			
+			<li class="devices"><a class="red" href="parts/samsung-xe350xba.html">Samsung XE350XBA</a></li>
+		</ul>
+	</div>
+	</main>
+	<div class="space"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
