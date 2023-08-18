@@ -1,9 +1,9 @@
 
 //Keeps you from refreshing on accident
 
-window.onbeforeunload = function() {
-    return "Data will be lost if you leave the page, are you sure?";
-};
+// window.onbeforeunload = function() {
+//     return "Data will be lost if you leave the page, are you sure?";
+// };
 
 // Functionality of the metric calculator itself
 let diags = 0
@@ -151,3 +151,20 @@ decreaseDiag.addEventListener("click", increase)
 decreaseComp.addEventListener("click", increase)
 
  
+
+//time-calc
+// 9      0
+// 10   13%
+// 11   25%
+// 12   38%
+// 1     50%
+// 2     63%
+// 3     75%
+// 4     88%
+// 5     100%
+
+// 9 + (percent * 8) //this is the general concept
+
+//question is how to rollover the minutes into hours and from noon to one
+
+
