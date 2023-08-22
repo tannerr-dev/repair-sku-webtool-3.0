@@ -119,5 +119,10 @@ button:hover{
 	bottom:310px;
 	left: 10px;
 	font-size: 64px;
+	opacity: 0;
+  	transition: 1s;
 }
-
+#copied.fade-in{
+	opacity: 1;
+  	transition: 1s;
+}
