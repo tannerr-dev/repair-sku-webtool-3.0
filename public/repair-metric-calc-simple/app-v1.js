@@ -1,9 +1,9 @@
 
 //Keeps you from refreshing on accident
 
-// window.onbeforeunload = function() {
-//     return "Data will be lost if you leave the page, are you sure?";
-// };
+window.onbeforeunload = function() {
+    return "Data will be lost if you leave the page, are you sure?";
+};
 
 // Functionality of the metric calculator itself
 let diags = 0
