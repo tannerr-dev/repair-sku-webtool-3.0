@@ -9,7 +9,7 @@ window.onbeforeunload = function() {
 let diags = 0
 let comps = 0
 let total = comps/15 + diags/30
-
+let time;
 function plusOneComp() {
     // add one
     comps = comps +1;
@@ -112,7 +112,7 @@ function updateBars(){
 
 
 
-function increase(){
+function inc(){
     if(total > 1.01){
         redBar = 0;
         greenBar = 1 - (total - 1);
@@ -133,7 +133,10 @@ function increase(){
     }
     updateBars();
     console.log(total)
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    document.getElementById('percent').innerText = Math.round(total*100) +"%";
+    updateTime();
+    document.getElementById('time').innerText = time;
+
 }
 
 
@@ -145,9 +148,54 @@ const totaldiags = document.querySelector("#totaldiags");
 const increaseDiag = document.querySelector("#increaseDiag");
 
 
-increaseDiag.addEventListener("click",increase)
-increaseComp.addEventListener("click",increase)
-decreaseDiag.addEventListener("click", increase)
-decreaseComp.addEventListener("click", increase)
+increaseDiag.addEventListener("click",inc)
+increaseComp.addEventListener("click",inc)
+decreaseDiag.addEventListener("click", inc)
+decreaseComp.addEventListener("click", inc)
 
  
+
+//time-calc
+// 9      0
+// 10   13%
+// 11   25%
+// 12   38%
+// 1     50%
+// 2     63%
+// 3     75%
+// 4     88%
+// 5     100%
+
+// 9 + (percent * 8) //this is the general concept
+
+//question is how to rollover the minutes into hours and from noon to one
+
+
+function updateTime(){
+    let t = total *8
+    let h = Math.trunc(t) + 9 ;
+    let hr;
+    let min = Math.round((t%1) * 60);
+    if (min <10){
+        min = "0"+ min;
+    }
+    if (h > 12){
+        hr = h-12;
+    } else {
+        hr = h;
+    }
+    time = `${hr}:${min}`;
+
+}
+//ex. 30% of 8
+// .3 * 8 = 2.4 hours
+// 2.4 hours split into 2 and .4
+// 9am + 2 and .4*60  for minutes
+// function NumToTime(num) { 
+//     var hours = Math.floor(num / 60);  
+//     var minutes = num % 60;
+//     if (minutes + ''.length < 2) {
+//       minutes = '0' + minutes; 
+//     }
+//     return hours + ":" + minutes;
+// }
