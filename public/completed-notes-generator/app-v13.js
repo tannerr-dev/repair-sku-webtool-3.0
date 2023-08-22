@@ -31,8 +31,8 @@ function copied(){
 }
 
 function copyAgain(){
-
     navigator.clipboard.writeText(all)
+    copied();
 }
 
 function formatCopy(){
