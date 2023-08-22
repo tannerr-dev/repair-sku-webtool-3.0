@@ -173,14 +173,19 @@ decreaseComp.addEventListener("click", inc)
 
 function updateTime(){
     let t = total *8
-    let hr = Math.trunc(t);
- 
+    let h = Math.trunc(t) + 9 ;
+    let hr;
     let min = Math.round((t%1) * 60);
     if (min <10){
         min = "0"+ min;
     }
- 
-    time = `${9 + hr}:${min}`;
+    if (h > 12){
+        hr = h-12;
+    } else {
+        hr = h;
+    }
+    time = `${hr}:${min}`;
+
 }
 //ex. 30% of 8
 // .3 * 8 = 2.4 hours
