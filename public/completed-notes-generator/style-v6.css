@@ -114,3 +114,10 @@ button:hover{
 	transform: translateY(-.1em);
 }
 
+#copied{
+	position: relative;
+	bottom:310px;
+	left: 10px;
+	font-size: 64px;
+}
+
