@@ -20,14 +20,20 @@ function finisher(){
     all = format.final + add
     document.getElementById('window').innerText = all
     navigator.clipboard.writeText(all)
+    copied();
+}
+function copied(){
+    let text = document.querySelector("#copied");
+    text.classList.add("fade-in");
+    setTimeout(()=>{
+        text.classList.remove("fade-in");
+    }, 1000);
 }
 
 function copyAgain(){
 
     navigator.clipboard.writeText(all)
 }
-
-
 
 function formatCopy(){
     let tempParts = [...parts]
@@ -39,7 +45,6 @@ function formatCopy(){
     }
     finisher();
 }
-
 
 function reserial(){
     let res = "Re-serialized motherboard to match previous motherboard's SN. ";
