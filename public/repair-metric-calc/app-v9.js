@@ -112,7 +112,7 @@ function updateBars(){
 
 
 
-function increase(){
+function inc(){
     if(total > 1.01){
         redBar = 0;
         greenBar = 1 - (total - 1);
@@ -133,7 +133,8 @@ function increase(){
     }
     updateBars();
     console.log(total)
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    document.getElementById('percent').innerText = Math.round(total*100) +"%";
+    defeated();
 }
 
 
@@ -145,15 +146,10 @@ const totaldiags = document.querySelector("#totaldiags");
 const increaseDiag = document.querySelector("#increaseDiag");
 
 
-increaseDiag.addEventListener("click",increase)
-increaseComp.addEventListener("click",increase)
-decreaseDiag.addEventListener("click", increase)
-decreaseComp.addEventListener("click", increase)
-
-increaseDiag.addEventListener("click",defeated)
-increaseComp.addEventListener("click",defeated)
-decreaseDiag.addEventListener("click", defeated)
-decreaseComp.addEventListener("click", defeated)
+increaseDiag.addEventListener("click",inc)
+increaseComp.addEventListener("click",inc)
+decreaseDiag.addEventListener("click", inc)
+decreaseComp.addEventListener("click", inc)
 
 
 function defeated(){
