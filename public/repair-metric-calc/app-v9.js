@@ -156,14 +156,14 @@ const boss = document.querySelector("#boss");
 var audio = new Audio('shorter-damage.mp3');
 function playAudio() {
     audio.play();
-}
+};
 const shake = [
     {transform: "rotate(5deg) scale(0.7)"},
     {transform: "rotate(-5deg) scale(1)"}
 ];
 const grow = [
     {transform: "scale(1.2)"}
-]
+];
 const timing = {
     duration: 200,
     iterations:1,
