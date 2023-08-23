@@ -1,48 +1,37 @@
-
 //Keeps you from refreshing on accident
-
 window.onbeforeunload = function() {
     return "Data will be lost if you leave the page, are you sure?";
 };
 
 // Functionality of the metric calculator itself
-let diags = 0
-let comps = 0
-let total = comps/15 + diags/30
+let diags = 0;
+let comps = 0;
+let total = comps/15 + diags/30;
 let time;
-function plusOneComp() {
-    // add one
-    comps = comps +1;
-    //update total
-    total = comps/15 + diags/30
 
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
-    document.getElementById('totalcomps').innerText = "Comps: " + comps
+function plusOneComp() {
+    comps += 1;
+    total = comps/15 + diags/30
+    document.getElementById('totalcomps').innerText = "Comps: " + comps;
+    updatePercent()
 }
 function minusOneComp() {
-    // add one
-    comps = comps -1;
-    //update total
+    comps -= 1;
     total = comps/15 + diags/30
-
     document.getElementById('totalcomps').innerText ="Comps: " + comps
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    updatePercent()
 }
 function plusOneDiag() {
-    // add one
-    diags = diags +1;
-    //update total
+    diags += 1;
     total = comps/15 + diags/30
     document.getElementById('totaldiags').innerText = "Diags: " + diags
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    updatePercent()
 }
 function minusOneDiag() {
-    // add one
-    diags = diags -1;
-    //update total
+    diags -= 1;
     total = comps/15 + diags/30
     document.getElementById('totaldiags').innerText = "Diags: " + diags
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    updatePercent()
 }
 
 //enter values manually when clicked
@@ -58,7 +47,7 @@ function minusOneDiag() {
    }
    comps = parseInt(enterC)
    total = comps/15 + diags/30
-   document.getElementById('percent').innerText = Math.round(total*100) +"%"
+   updatePercent()
    document.getElementById('totalcomps').innerText = "Comps: " + comps
    increase();
    updateBars();
@@ -76,12 +65,14 @@ function enterDiags(){
     diags = parseInt(enterD)
     total = comps/15 + diags/30
     document.getElementById('totaldiags').innerText = "Diags: " + diags
-    document.getElementById('percent').innerText = Math.round(total*100) +"%"
+    updatePercent()
     increase();
     updateBars();
 }
 
-
+function updatePercent(){
+    document.getElementById('percent').innerText = Math.round(total*100) +"%";
+}
 //NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR 
 
 
