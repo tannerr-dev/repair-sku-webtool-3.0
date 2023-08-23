@@ -84,10 +84,6 @@ function enterDiags(){
 
 //NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR 
 
-
-
-
-
 const green = document.querySelector("#green");
 const red = document.querySelector("#red");
 const superGreen = document.querySelector("#superGreen");
@@ -135,6 +131,9 @@ function inc(){
     console.log(total)
     document.getElementById('percent').innerText = Math.round(total*100) +"%";
     defeated();
+    if (total === 0.7){
+        document.getElementById('percent').innerText = "69"
+    }
 }
 
 
@@ -206,9 +205,10 @@ function hit(){
         setTimeout(youWin, 1000)
     }
     if(total < 1){
+        boss.animate(shake, timing);
         boss.src = "./bossExplos.png";
         setTimeout(explos, 250);
-        boss.animate(shake, timing);
+        
     }
 };
 
@@ -216,10 +216,19 @@ function growing(){
     if (total < 1){
     boss.animate(grow, timing);
     }
+    if (total === 0.7){
+        boss.src = "./thumbsUp.png";      
+    } else {
+    boss.src = "./boss3.0.png"
+    }
 };
 
 function explos(){
+    if (total === 0.7){
+        boss.src = "./thumbsUp.png";      
+    } else {
     boss.src = "./boss3.0.png"
+    }
 }
 function youWin(){
     boss.src = "./defeated3.0.png";
