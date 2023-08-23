@@ -11,27 +11,29 @@ let time;
 
 function plusOneComp() {
     comps += 1;
-    total = comps/15 + diags/30
-    document.getElementById('totalcomps').innerText = "Comps: " + comps;
-    updatePercent()
+    updateComps()
 }
 function minusOneComp() {
     comps -= 1;
+    updateComps()
+}
+function updateComps(){
     total = comps/15 + diags/30
     document.getElementById('totalcomps').innerText ="Comps: " + comps
     updatePercent()
 }
 function plusOneDiag() {
     diags += 1;
-    total = comps/15 + diags/30
-    document.getElementById('totaldiags').innerText = "Diags: " + diags
-    updatePercent()
+    updateDiags();
 }
 function minusOneDiag() {
     diags -= 1;
+    updateDiags();
+};
+function updateDiags(){
     total = comps/15 + diags/30
     document.getElementById('totaldiags').innerText = "Diags: " + diags
-    updatePercent()
+    updatePercent();
 }
 
 //enter values manually when clicked
@@ -48,43 +50,35 @@ function minusOneDiag() {
    comps = parseInt(enterC)
    total = comps/15 + diags/30
    updatePercent()
-   document.getElementById('totalcomps').innerText = "Comps: " + comps
-   increase();
-   updateBars();
-}
+   document.getElementById('totalcomps').innerText = "Comps: " + comps;
+   inc();
+};
 function enterDiags(){
-    enterD = prompt("How many diags have you done?")
+    enterD = prompt("How many diags have you done?");
     while(isNaN(parseInt(enterD))){
         if (enterD === ''){
             return
         } else if (enterD === null){
             return
-        }
-        enterD = prompt("Try again buddy...need a number..")
-    }
-    diags = parseInt(enterD)
-    total = comps/15 + diags/30
-    document.getElementById('totaldiags').innerText = "Diags: " + diags
-    updatePercent()
-    increase();
-    updateBars();
-}
+        };
+        enterD = prompt("Try again buddy...need a number..");
+    };
+    diags = parseInt(enterD);
+    total = comps/15 + diags/30;
+    document.getElementById('totaldiags').innerText = "Diags: " + diags;
+    updatePercent();
+    inc();
+};
 
 function updatePercent(){
     document.getElementById('percent').innerText = Math.round(total*100) +"%";
-}
+};
 //NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR NEW STATUS BAR 
-
-
-
-
-
 const green = document.querySelector("#green");
 const red = document.querySelector("#red");
 const superGreen = document.querySelector("#superGreen");
 const down = document.querySelector("#down");
 const up = document.querySelector("#up");
-
 
 // let total = 0;
 let greenBar= 0;
@@ -99,37 +93,29 @@ function updateBars(){
     red.style.flexGrow = redBar;
     green.style.flexGrow = greenBar;
     superGreen.style.flexGrow = superGreenBar;
-}
-
-
-
+};
 function inc(){
-    if(total > 1.01){
+    if (total > 1.01){
         redBar = 0;
         greenBar = 1 - (total - 1);
         superGreenBar = total -1;
-    }
-    else if(total >= 1){
+    } else if (total >= 1){
         greenBar = total;
         redBar = 0;
         superGreenBar = 0;
-    } else if(total <= 0){
+    } else if (total <= 0){
         redBar = 1;
         greenBar = 0;
-    }
-    else{
+    } else {
         redBar = 1 - total;
         greenBar = total;
         superGreenBar = 0;
-    }
+    };
     updateBars();
-    console.log(total)
-    document.getElementById('percent').innerText = Math.round(total*100) +"%";
+    updatePercent();
     updateTime();
     document.getElementById('time').innerText = time;
-
-}
-
+};
 
 const decreaseComp = document.querySelector("#decreaseComp");
 const totalcomps = document.querySelector("#totalComps");
@@ -138,46 +124,27 @@ const decreaseDiag = document.querySelector("#decreaseDiag");
 const totaldiags = document.querySelector("#totaldiags");
 const increaseDiag = document.querySelector("#increaseDiag");
 
+increaseDiag.addEventListener("click",inc);
+increaseComp.addEventListener("click",inc);
+decreaseDiag.addEventListener("click", inc);
+decreaseComp.addEventListener("click", inc);
 
-increaseDiag.addEventListener("click",inc)
-increaseComp.addEventListener("click",inc)
-decreaseDiag.addEventListener("click", inc)
-decreaseComp.addEventListener("click", inc)
-
- 
-
-//time-calc
-// 9      0
-// 10   13%
-// 11   25%
-// 12   38%
-// 1     50%
-// 2     63%
-// 3     75%
-// 4     88%
-// 5     100%
-
-// 9 + (percent * 8) //this is the general concept
-
-//question is how to rollover the minutes into hours and from noon to one
-
-
+//time functions 
 function updateTime(){
-    let t = total *8
-    let h = Math.trunc(t) + 9 ;
+    let t = total *8;
+    let h = Math.trunc(t) + 9;
     let hr;
     let min = Math.round((t%1) * 60);
     if (min <10){
         min = "0"+ min;
-    }
+    };
     if (h > 12){
         hr = h-12;
     } else {
         hr = h;
-    }
+    };
     time = `${hr}:${min}`;
-
-}
+};
 //ex. 30% of 8
 // .3 * 8 = 2.4 hours
 // 2.4 hours split into 2 and .4
