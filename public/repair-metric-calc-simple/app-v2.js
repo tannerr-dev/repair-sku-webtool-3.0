@@ -42,10 +42,10 @@ function updateDiags(){
             return
         } else if(enterC === null){
             return
-        }
+        };
     enterC = prompt('Try again buddy...number pleaseeee')
-   }
-   comps = parseInt(enterC)
+   };
+   comps = parseInt(enterC);
    updateComps();
    buttonClick();
 };
@@ -60,7 +60,7 @@ function enterDiags(){
         enterD = prompt("Try again buddy...need a number..");
     };
     diags = parseInt(enterD);
-    updateDiags()
+    updateDiags();
     buttonClick();
 };
 
