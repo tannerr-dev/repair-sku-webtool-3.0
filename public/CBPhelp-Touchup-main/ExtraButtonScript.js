@@ -7,5 +7,7 @@ linkOne.addEventListener("click", () => {
 })
 
 document.querySelector("#SlinkTwo").addEventListener("click", () => {
-    previewWindow.src = "https://cbp.help/repair/changing-chromebook-serial-number/";
+    // previewWindow.src = "https://cbp.help/repair/changing-chromebook-serial-number/";
+    previewWindow.src = "https://docs.google.com/document/d/1VGgXymh1N_56tnMvDb578XJBsc_VCtVvOlh0Oh1Hb2Q/view?pli=1";
+    
 })
