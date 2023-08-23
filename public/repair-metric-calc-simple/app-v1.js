@@ -11,30 +11,28 @@ let time;
 
 function plusOneComp() {
     comps += 1;
-    updateComps()
-}
+    updateComps();
+};
 function minusOneComp() {
     comps -= 1;
-    updateComps()
-}
+    updateComps();
+};
 function updateComps(){
-    total = comps/15 + diags/30
-    document.getElementById('totalcomps').innerText ="Comps: " + comps
-    updatePercent()
-}
+    total = comps/15 + diags/30;
+    document.getElementById('totalcomps').innerText ="Comps: " + comps;
+};
 function plusOneDiag() {
     diags += 1;
     updateDiags();
-}
+};
 function minusOneDiag() {
     diags -= 1;
     updateDiags();
 };
 function updateDiags(){
-    total = comps/15 + diags/30
-    document.getElementById('totaldiags').innerText = "Diags: " + diags
-    updatePercent();
-}
+    total = comps/15 + diags/30;
+    document.getElementById('totaldiags').innerText = "Diags: " + diags;
+};
 
 //enter values manually when clicked
   function enterComps() {
@@ -49,7 +47,7 @@ function updateDiags(){
    }
    comps = parseInt(enterC)
    updateComps();
-   inc();
+   buttonClick();
 };
 function enterDiags(){
     enterD = prompt("How many diags have you done?");
@@ -63,7 +61,7 @@ function enterDiags(){
     };
     diags = parseInt(enterD);
     updateDiags()
-    inc();
+    buttonClick();
 };
 
 function updatePercent(){
@@ -85,7 +83,7 @@ red.style.flexGrow = redBar;
 green.style.flexGrow = greenBar;
 superGreen.style.flexGrow = superGreenBar;
 
-function inc(){
+function buttonClick(){
     if (total > 1.01){
         redBar = 0;
         greenBar = 1 - (total - 1);
@@ -117,10 +115,10 @@ const decreaseDiag = document.querySelector("#decreaseDiag");
 const totaldiags = document.querySelector("#totaldiags");
 const increaseDiag = document.querySelector("#increaseDiag");
 
-increaseDiag.addEventListener("click",inc);
-increaseComp.addEventListener("click",inc);
-decreaseDiag.addEventListener("click", inc);
-decreaseComp.addEventListener("click", inc);
+increaseDiag.addEventListener("click",buttonClick);
+increaseComp.addEventListener("click",buttonClick);
+decreaseDiag.addEventListener("click", buttonClick);
+decreaseComp.addEventListener("click", buttonClick);
 
 //time functions 
 function updateTime(){
