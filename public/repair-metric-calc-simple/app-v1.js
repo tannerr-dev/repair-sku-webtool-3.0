@@ -48,9 +48,7 @@ function updateDiags(){
     enterC = prompt('Try again buddy...number pleaseeee')
    }
    comps = parseInt(enterC)
-   total = comps/15 + diags/30
-   updatePercent()
-   document.getElementById('totalcomps').innerText = "Comps: " + comps;
+   updateComps();
    inc();
 };
 function enterDiags(){
@@ -64,9 +62,7 @@ function enterDiags(){
         enterD = prompt("Try again buddy...need a number..");
     };
     diags = parseInt(enterD);
-    total = comps/15 + diags/30;
-    document.getElementById('totaldiags').innerText = "Diags: " + diags;
-    updatePercent();
+    updateDiags()
     inc();
 };
 
@@ -89,11 +85,6 @@ red.style.flexGrow = redBar;
 green.style.flexGrow = greenBar;
 superGreen.style.flexGrow = superGreenBar;
 
-function updateBars(){
-    red.style.flexGrow = redBar;
-    green.style.flexGrow = greenBar;
-    superGreen.style.flexGrow = superGreenBar;
-};
 function inc(){
     if (total > 1.01){
         redBar = 0;
@@ -111,7 +102,9 @@ function inc(){
         greenBar = total;
         superGreenBar = 0;
     };
-    updateBars();
+    red.style.flexGrow = redBar;
+    green.style.flexGrow = greenBar;
+    superGreen.style.flexGrow = superGreenBar;
     updatePercent();
     updateTime();
     document.getElementById('time').innerText = time;
