@@ -32,12 +32,13 @@ main{
 }
 
 .rmc{
-   margin-top:30px;
+   margin:30px;
    font-size: 50px;
-
+   font-weight: bold;
 }
 .rmc2{
    font-size: 40px;
+   font-weight: bold;
 }
 .rmBtn {
    height: 50px;
@@ -56,8 +57,14 @@ main{
    margin: 0px;
 }
 #percent{
-   margin: 0px;
+   margin-top: 20px;
    font-size: 50px;
+   font-weight: bold;
+}
+#time{
+   display: block;
+   font-weight: bold;
+   margin-bottom: 10px;
 }
 h2{
    display: inline;
