@@ -24,6 +24,10 @@ main{
     border-radius: 20px;
 
 }
+hr{
+	border-color: #0F9D58;
+	border-width: 10px;
+}
 .qc-list{
 	margin:20px;
 
