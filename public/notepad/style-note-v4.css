@@ -30,7 +30,9 @@ main{
 .top{
 	text-align: center;
 	color: blanchedalmond;
-	margin:0px;
+	font-size: 40px;
+	padding: 20px;
+	font-weight: bold;
 }
 .notepad{
 	border-color: #F4B400;
