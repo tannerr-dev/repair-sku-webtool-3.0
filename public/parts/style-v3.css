@@ -52,8 +52,11 @@ button{
 	transition: all 0.2s ease-out;
 }
 button:active{
-	background-color:#DEE2E6;
+	/* background-color:#DEE2E6; */
+	background: linear-gradient(rgb(158, 158, 158) 45%, rgb(105, 105, 105) 55%);
 	transform: translateY(.5em);
+	border: 1px solid #ffffff;
+
 }
 button:hover{
 
