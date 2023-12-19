@@ -21,6 +21,11 @@ const copyEmail = document.querySelector('#copyEmail')
 copyEmail.addEventListener('click', ()=>{
     navigator.clipboard.writeText(output.value);
 })
+const recipients = document.querySelector('#recipients')
+const copyRecipients = document.querySelector('#copyRecipients')
+copyRecipients.addEventListener('click', ()=>{
+    navigator.clipboard.writeText(recipients.value);
+})
 // Vendor: 
 // SKU: 
 // Qty item RCPT: 
