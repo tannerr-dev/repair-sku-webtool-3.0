@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tool</title>
+    <!-- <link href="pico.min.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
 </head>
 <body style="background-color: rgb(32,32,32); display: flex;flex-direction: column;height: 100vh; justify-content: center; align-items: center;">
     <main>
-        <textarea name="" id="input" cols="40" rows="10"></textarea><br>
+        <label for="input" style="color: white; font-family: Arial, Helvetica, sans-serif;">Paste Item Reciept header content:</label><br>
+        <textarea name="input" id="input" cols="40" rows="10"></textarea><br>
        
         <textarea name="" id="recipients" cols="40" rows="1" style="margin-top: 60px;">purchasing@chromebookparts.com, testing@chromebookparts.com, cfrancis@chromebookparts.com, kkubiak@chromebookparts.com, kcotomora@chromebookparts.com, skuharski@chromebookparts.com</textarea><br>
         <button id="copyRecipients">Copy Recipients</button><br>
