@@ -1,10 +1,9 @@
 const input = document.querySelector('#input');
-const format = document.querySelector('#format');
+
 const output = document.querySelector('#output');
 const subject = document.querySelector('#subject')
 
-
-format.addEventListener('click', ()=>{
+input.addEventListener('input', ()=>{
     console.log(input.value.split("\n"))
     const values = input.value.split("\n");
     const po = values[7].split(' ')[2];
