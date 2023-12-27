@@ -1,6 +1,17 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 textarea{
     font-family: inherit;
+}
+img{
+    width: 400px;
+    /* margin: 40px 0px 40px 0px; */
+}
+p{
+    color: white;
+    width: 400px;
+    margin: 0px 0px 10px 410px;
+
 }
