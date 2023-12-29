@@ -4,11 +4,15 @@ const output = document.querySelector('#output');
 const subject = document.querySelector('#subject')
 
 input.addEventListener('input', ()=>{
-    console.log(input.value.split("\n"))
+    // console.log(input.value.split("\n"))
     const values = input.value.split("\n");
     const po = values[7].split(' ')[2];
+    const qty = values[9].split(' ')[0];
+    const tested = values[10].split(' ')[0];
+    const failed = values[12].split(' ')[0];
+    const desc = values[13]
     subject.value = `PO${po}, REF#${values[1]}, ${values[8]}, VRMA Request`
-    output.value = `Vendor: ${values[5]}\nSKU: ${values[8]}\nQty item RCPT: \nQty Tested: \nQty Failed: \nMPN on the product: \nDescription of Issue: `;
+    output.value = `Vendor: ${values[5]}\nSKU: ${values[8]}\nQty item RCPT: ${qty}\nQty Tested: ${tested}\nQty Failed: ${failed}\nMPN on the product: \nDescription of Issue: ${desc}`;
 });
 
 const copySubject = document.querySelector('#copySubject');
