@@ -5,14 +5,36 @@ const subject = document.querySelector('#subject')
 
 input.addEventListener('input', ()=>{
     console.log(input.value.split("\n"))
-    const values = input.value.split("\n");
-    const po = values[7].split(' ')[2];
-    // const qty = values[9].split(' ')[0];
-    // const tested = values[10].split(' ')[0];
-    // const failed = values[12].split(' ')[0];
-    // const desc = values[13];
+    let values = input.value.split("\n");
+    let po = values[7].split(' ')[2];
+    let ts = values[9];
+    let qty = values[10];
+    let tested = values[11];
+    let failed = values[13];
+    let desc = values[14];
+    if (qty == undefined){
+        qty="";
+    } else {
+        qty = values[10].split(' ')[0];
+    }
+    if (ts == undefined){
+        ts="";
+    }
+    if (tested == undefined){
+        tested = "";
+    } else {
+        tested = values[11].split(' ')[0];
+    }
+    if (failed == undefined){
+        failed = "";
+    } else {
+        failed = values[13].split(' ')[0]
+    }
+    if (desc == undefined){
+        desc = "";
+    }
     subject.value = `PO${po}, REF#${values[1]}, ${values[8]}, VRMA Request`
-    output.value = `Vendor: ${values[5]}\nSKU: ${values[8]}\nQty item RCPT: \nQty Tested: \nQty Failed: \nMPN on the product: \nDescription of Issue: `;
+    output.value = `Vendor: ${values[5]}\nSKU: ${values[8]}\nQty item RCPT: ${qty}\nQty Tested: ${tested}\nQty Failed: ${failed}\nMPN on the product: \nTesting Cone: ${ts}\nDescription of Issue: ${desc}`;
 });
 
 const copySubject = document.querySelector('#copySubject');
