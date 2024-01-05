@@ -10,8 +10,8 @@ input.addEventListener('input', ()=>{
     let ts = values[9];
     let qty = values[10];
     let tested = values[11];
-    let failed = values[13];
-    let desc = values[14];
+    let failed = values[12];
+    let desc = values[13];
     if (qty == undefined){
         qty="";
     } else {
@@ -28,7 +28,7 @@ input.addEventListener('input', ()=>{
     if (failed == undefined){
         failed = "";
     } else {
-        failed = values[13].split(' ')[0]
+        failed = values[12].split(' ')[0]
     }
     if (desc == undefined){
         desc = "";
