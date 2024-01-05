@@ -6,6 +6,7 @@ body{
 textarea{
     font-family: inherit;
     font-size: inherit;
+    background-color:antiquewhite;
     /* font-size: 1.1rem; */
 }
 button{
